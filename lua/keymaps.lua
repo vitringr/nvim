@@ -3,10 +3,6 @@ local map = vim.keymap.set
 -- Leader
 vim.g.mapleader = " "
 
--- Escape
--- map("i", "jk", "<ESC>", { desc = "Escape" })
--- map("i", "kj", "<ESC>", { desc = "Escape" })
-
 map("n", "<C-o>", "<C-i>", { noremap = true, silent = true })
 map("n", "<C-i>", "<C-o>", { noremap = true, silent = true })
 
@@ -36,16 +32,16 @@ map({ "n", "v" }, "<leader>fs", "<cmd>LspStop<CR>", { desc = "Stop" })
 map({ "n", "v" }, "<leader>fg", "<cmd>LspInfo<CR>", { desc = "Info" })
 map({ "n", "v" }, "<leader>fr", "<cmd>LspRestart<CR>", { desc = "Restart" })
 map({ "n", "v" }, "<leader>ff", function()
-  vim.lsp.buf.format({ async = true })
+	vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
-map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Format" })
+map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 
 -- Workspace
 map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
 map({ "n", "v" }, "<leader>x", function()
-  local wrap_status = vim.wo.wrap
-  vim.wo.wrap = not wrap_status
-  vim.wo.cursorline = not wrap_status
+	local wrap_status = vim.wo.wrap
+	vim.wo.wrap = not wrap_status
+	vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
 
 -- Splits

@@ -37,9 +37,9 @@ o.fillchars = "eob: "         -- End of buffer (default ~) characters.
 
 o.termguicolors = true        -- Enable 24-bit RGB colors.
 
-vim.opt.shortmess:append("I") -- Disable welcome message.
+-- vim.opt.shortmess:append("I") -- Disable welcome message.
 
--- vim.opt.iskeyword:remove("_") -- Treat "_" as a symbol.
+vim.opt.iskeyword:remove("_") -- Treat "_" as a symbol.
 
 vim.diagnostic.config({
   virtual_text = false,     -- Inline text
